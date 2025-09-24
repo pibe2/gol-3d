@@ -1,38 +1,54 @@
-canvas#myGLCanvas{
+
+canvas#myGLCanvas {
     width: 100%;
     margin: 0;
     padding-top: 2px;
     display: block;
 }
 
-body{
+body {
     background: black;
     color: white;
+    font-family: verdana, serif;
 }
 
-ul#controlsList {
-    list-style: none;
+#renderingOptions {
+    width: 100%;
 }
 
-li.ctrl{
-    background: dimgray;
+#rules {
+    display: inline;
+    margin: 0 auto;
+}
+
+#rules input {
+    margin: 1% auto;
+    padding: 10px 10px;
+    border: 1px solid gray;
+    border-radius: 2px;
+    width: 30px;
+    text-align: center;
+    background: #333333;
     color: white;
-    font-size: x-large;
-    margin-right: 1%;
-    margin-top: 3px;
+}
+
+#rules label {
+    margin: 3px 1% 10px 10px;
     padding: 10px;
     border-radius: 5px;
-    float:left;
-    display: inline;
 }
 
-button#fullScreenButton{
-    width: 300px;
-    height: 100px;
-    font-size: x-large;
-    margin: auto;
-    margin-top: 5px;
-    display: block;
+button {
+    border-radius: 10px;
+    border: 1px solid gray;
+    width: 100px;
+    height: 50px;
+    font-size: large;
+    margin: 5px;
     background: black;
     color: white;
+}
+
+button {
+    cursor: pointer;
 }

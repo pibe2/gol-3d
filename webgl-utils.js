@@ -183,7 +183,7 @@ function createGLContext(canvas) {
     var context = null;
     for (var i = 0; i < names.length; i++) {
         try {
-            context = canvas.getContext(names[i]);
+            context = canvas.getContext(names[i], {preserveDrawingBuffer: true});
         } catch (e) {
         }
         if (context) {

@@ -31,7 +31,7 @@ function Cell (state, gridX, gridY, gridZ) {
     this.gridZ = gridZ;
 
     /**
-     * @param {cell} neighbor
+     * @param {Cell} neighbor
      */
     this.addNeighbor = function (neighbor){
         this.neighbors.push(neighbor);
@@ -98,7 +98,7 @@ function Cell (state, gridX, gridY, gridZ) {
         var count = 0;
         for (var i = 0, len = this.neighbors.length; i < len; i++) {
             var neighbor = this.neighbors[i];
-            if (neighbor.getState() == CELL_ON) {
+            if (neighbor.getState() === CELL_ON) {
                 count += 1;
             }
         }

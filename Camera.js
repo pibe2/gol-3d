@@ -1,4 +1,4 @@
-//      x and y dir will then be determining by rotating the cannonical x and y dirs
+//      x and y dir will then be determined by rotating the canonical x and y dirs
 //      by the rotation matrix that results from rotating the canonical zdir to the given
 //      viewDirection; this will clean up the setFocus method quite a bit, and less
 //      parameters will need to be given to create a camera
@@ -204,7 +204,7 @@ Camera.prototype.changeRelZDir = function (newRelZDir) {
  * note that eyeDir must be perpendicular to upDir, and all dir vecs are assumed unit length
  * @param {vec3} eyePt  -- should have the same y-val as the focus, for an updir of [0, 1, 0]
  * @param {vec3} upDir -- cam's relative up dir. usually (0, 1, 0)
- * @param {vec3} focusPt  -- the point around we're orbiting around. should be the same
+ * @param {vec3} focusPt  -- the point which we orbit
  * @param {number} fovy Vertical field of view in radians
  * @param {number} aspectRatio Aspect ratio. typically viewport width/height
  * @param {number} nearZ Near bound of the frustum

@@ -89,7 +89,7 @@ function CameraInteractor(camera, canvas) {
     this.shouldMouseTurn = !(this.camera instanceof OrbitingCamera);
 
     this.orbitTransDist = 0.005 * this.freeCameraFactor / 0.000015;
-    this.transDist = this.orbitTransDist;
+    this.transDist = 100 * this.orbitTransDist;
     //this.transDist = 5 * 0.01 * this.freeCameraFactor / 0.000015;
     this.rotDist = 0.01;
 

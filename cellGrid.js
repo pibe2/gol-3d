@@ -20,16 +20,14 @@
 /**
  * @param {number} size
  * @param {number} cellWorldSize
- * @param {Rule} rule
  * @constructor
  */
-function CellGrid(size, cellWorldSize, rule) {
+function CellGrid(size, cellWorldSize) {
     this.grid = null;
     this.size = size;
-    this.rule = rule;
     this.cellWorldSize = cellWorldSize;
     this.worldCenter = null;
-    this.worldMarginFactor = 1.5;
+    this.worldMarginFactor = 1.2;
 
     this.setup = function () {
         this.grid = MathUtils.create3dArray(size, size, size);
@@ -154,11 +152,13 @@ function CellGrid(size, cellWorldSize, rule) {
         return vec3.copy(out, this.worldCenter);
     };
 
-    this.step = function () {
-        var self = this;
+    /**
+     * @param {Rule} rule
+     */
+    this.step = function (rule) {
         this.iterateCells(
             function (cell, i, j, k) {
-                cell.setState(self.rule.getNextState(cell));
+                cell.setState(rule.getNextState(cell));
             }
         );
     };
