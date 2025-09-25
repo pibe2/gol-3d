@@ -3,5 +3,6 @@
   "name": "gol-3d",
   "assets": {
     "directory": "../dist/"
-  }
+  },
+  "workers_dev": false
 }
